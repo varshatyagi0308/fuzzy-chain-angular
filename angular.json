@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "fuzzy-blaze:build:production"
+              "buildTarget": "fuzzy-blaze:build:production"
             },
             "development": {
-              "browserTarget": "fuzzy-blaze:build:development"
+              "buildTarget": "fuzzy-blaze:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fuzzy-blaze:build"
+            "buildTarget": "fuzzy-blaze:build"
           }
         },
         "test": {
