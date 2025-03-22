@@ -9,7 +9,7 @@ import { UserState } from '../user/state.model';
   template: `
     <h1>User Details</h1>
     <ul>
-      <li *ngFor="let user of users$ | async">{{ user.name }}</li>
+      <li *ngFor="let user of users$ | async">{{ user.school_name }}</li>
     </ul>
   `
 })

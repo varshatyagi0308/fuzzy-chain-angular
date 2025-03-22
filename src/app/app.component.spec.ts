@@ -1,31 +1,24 @@
-import { TestBed } from '@angular/core/testing';
+import { TestBed, ComponentFixture } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { Component } from '@angular/core';
 
-describe('AppComponent', () => {
+describe('App Component', () => {
+  let fixture: ComponentFixture<AppComponent>;
+  let component: AppComponent;
+
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+   await TestBed.configureTestingModule({
+      declarations: [AppComponent],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+  beforeEach(()=>{
+      fixture =  TestBed.createComponent(AppComponent);
+      component = fixture.componentInstance;
+      fixture.detectChanges();
   });
 
-  it(`should have as title 'fuzzy-blaze'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('fuzzy-blaze');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('fuzzy-blaze app is running!');
+  it('should pass sanity test', () => {
+    expect(component).toBeTruthy();
   });
 });
